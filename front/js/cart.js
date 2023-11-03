@@ -299,11 +299,13 @@ function postForm() {
     function controlFirstName() {
       const okFirstName = contact.firstName
       if (communeRegex.test(okFirstName)) {
+        firstNameErrorMsg.innerText = ""
         return true
       }
       else {
         let firstNameErrorMsg = document.getElementById('firstNameErrorMsg')
-        alert((firstNameErrorMsg = 'Prénom. Erreur'))
+        firstNameErrorMsg.innerText = "problème"
+        // alert((firstNameErrorMsg = 'Prénom. Erreur'))
         return false
       }
     }
